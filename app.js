@@ -1,5 +1,3 @@
-let count = 0;
-
-function btnLog(){
-    console.log(count++);
+function btnLog(obj){
+    console.log(typeof obj);
 }

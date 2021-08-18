@@ -2,24 +2,41 @@ body{
     margin: 5% 30%;
     padding: auto;
     text-align: center;
-}
-
-.chatting{
-    border: 5px solid black;
-    width: 500px;
-    height: 300px;
-    border-radius: 3%;
-    margin: 7% auto;
-    position:relative;
-    text-align: center;
-}
-
-.chatting p{
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
+    background-color: black;
 }
 
 h2{
     color: mediumslateblue;
+    font-size: 3rem;
 }
+
+.btn {
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+    color: #FFFFFF;
+    font-family: Arial;
+    font-size: 14px;
+    padding: 8px;
+    background-color: #000000;
+    border: solid #FFFFFF 2px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+ }
+
+ #id_section {
+    color: #fff;
+    text-shadow:
+        /* White glow */
+        0 0 1px #fff,
+        0 0 7px #fff,
+        0 0 37px #fff,
+        /* Green glow */
+        0 0 76px #F9B208,
+        0 0 47px #F9B208,
+        0 0 103px #F9B208,
+        0 0 3px #F9B208,
+        0 0 26px #F9B208
+  }

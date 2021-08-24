@@ -1,35 +1,103 @@
-.container{
-    margin: 10% auto;
+/*
+font-family: 'Hi Melody', cursive; //kor
+font-family: 'Indie Flower', cursive;
+font-family: 'Nanum Pen Script', cursive;
+font-family: 'Permanent Marker', cursive;
+*/
+
+body{
+    background-color: #d4cac5;
+    margin: 2% auto;
+    text-align: center;
+    color: white;
+    font-family: 'Hi Melody', cursive;
+}
+
+section{
+    margin: 8% auto;
+}
+
+article{
+    margin: 3% auto;
+}
+
+footer{
+    position: fixed;
+    left: 50%;
+    margin-left: -55px;
+    bottom: 20px;
+    font-size: 20px;
+}
+
+
+/*text-area*/
+.text-area{
+    height: 300px;
+    width: 40%;
+    background-color: #fff;
+    color: #000;
+    margin: 3% auto 3% auto;
+    border-radius: 36% 45% 37% 42%;
+    position: relative;
+}
+
+#back{
+    position: absolute;
+    left: 75%;
+    top: 20%;
+}
+
+#answer{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 45%;
+    font-size: 3rem;
     text-align: center;
 }
 
-h2{
-    visibility: hidden;
-    font-size: 3rem;
+
+
+/*user - text input*/
+.user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+input[type=text]{
+    width: 25%;
+    height: 30px;
+    margin-bottom: 2%;
+    border: none;
+    border-bottom: 3px solid #fff;
+    background: none;
 
-.btn{
-    position:relative;
-    margin-top: 100px;
+    color: white;
+    text-align: center;
+    font-family: 'Hi Melody', cursive;
+    font-size: 30px;
 }
 
-.phone{
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    margin-left: -50px;
+input[type=text]:focus{
+    outline-style: none; /* 포커스시 발생하는 효과 제거를 원한다면 */ 
+    -webkit-appearance: none; /* 브라우저별 기본 스타일링 제거 */ 
+    -moz-appearance: none; 
+    appearance: none;
 }
 
-/*phone click event css*/
-#phone_non_click{
-    position: absolute;
-    opacity: 50%;
-    left: 50%;
-    margin-left: -50px;
+input[type=button]{
+    background-color: #fff;
+    width: 100px; height: 40px;
+    border: none;
+    color: #df4f36;
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+    font-weight: bold;
 }
 
-.phone_click{
-    z-index: 2;
+input[type=button]:hover{
+    background-color: #df4f36;
+    color: #fff;
 }
-

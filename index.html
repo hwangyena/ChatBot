@@ -6,16 +6,29 @@
     
     <link rel="stylesheet" href="./css/styles.css">
     <script defer src="app.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Hi+Melody&family=Indie+Flower&family=Nanum+Pen+Script&family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h2 id="number">yesme 010-1234-5678</h2>
+    <header></header>
+    <section>
+        <article>
+            <div class="text-area">
+                <img src="./image/back.png" alt="" width="50px" id="back">
+                <span id="answer">안녕!</span>
+            </div>
+            <img src="./image/basic.png" alt="">
+        </article>
 
-        <div class="btn">
-            <img src="./image/phone.png" width="100px" height="100px" onclick="btn()" class="phone">
-            <img src="./image/clickPhone.jpg" width="100px" height="100px" id="phone_non_click">
-        </div>
-    </div>
-    
+        <article class="user">
+            <input type="text" id="user_text" placeholder="쿼카랑 대화하기">
+            <input type="button" value="chat" onclick=chatting()>
+        </article>
+    </section>
+    <footer>
+        Copyright yesme
+    </footer>
 </body>
 </html>

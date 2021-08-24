@@ -1,4 +1,4 @@
-const quokaChat = {
+const quokkaChat = {
     0: "무슨 말인지 모르겠어",
     1: "안녕!! 난 쿼카야",
     2: "난 책 읽는걸 좋아해",
@@ -14,9 +14,11 @@ const userHi = [
 
 const userHabbit = [
     "취미가 뭐야?",
+    "취미가 뭐야",
     "뭐 좋아해?",
     "좋아하는 거",
-    "취미"
+    "취미",
+    "취미?"
 ]
 
 const userDoing = [
@@ -32,6 +34,15 @@ function textShow(str){
     txt.innerText = str;
 }
 
+function changeImg(answer){
+    let img = document.getElementById("quokka");
+    
+    if(answer==0) img.src = "./image/quokka_non_save.png";
+    else if(answer==2) img.src = './image/quokka_study.png';
+    else if(answer==3) img.src = "./image/quokka_eat.png";
+    else img.src = "./image/quokka_basic.png";
+}
+
 function chatting(){
     let user = document.getElementById("user_text").value;
 
@@ -45,6 +56,7 @@ function chatting(){
     else if(userHabbit.includes(user)) answer = 2;
     else if(userDoing.includes(user)) answer = 3;
 
-    console.log(quokaChat[answer]);
-    textShow(quokaChat[answer]);
+    console.log(quokkaChat[answer]);
+    textShow(quokkaChat[answer]); /*quokka text*/
+    changeImg(answer); /*quokka img*/
 }

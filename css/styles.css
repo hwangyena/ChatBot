@@ -37,8 +37,20 @@ footer{
     background-color: #fff;
     color: #000;
     margin: 3% auto 3% auto;
-    border-radius: 36% 45% 37% 42%;
+    border-radius: 30%;
     position: relative;
+}
+
+.text-area::after{
+    content:'';
+    position: absolute;
+    left: 65%;
+    bottom: -30px;
+    
+    border: 30px solid transparent;
+    border-top-color: #fff;
+    border-bottom: 0;
+    border-left: 0;
 }
 
 #back{

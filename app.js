@@ -60,3 +60,21 @@ function chatting(){
     textShow(quokkaChat[answer]); /*quokka text*/
     changeImg(answer); /*quokka img*/
 }
+
+/* 모드 변경 */
+let mode = 1;
+function modeConvert(){
+    let modeId = document.getElementById("mode");
+    if(mode===1){ //dark mode
+        document.body.style.backgroundColor = "#585551";
+        modeId.classList.remove("dark");
+        modeId.classList.add("light");
+    }
+    else{//light mode
+        document.body.style.backgroundColor = "#d4cac5";
+        modeId.classList.remove("light");
+        modeId.classList.add("dark");
+    }
+    mode ^= 1;
+}
+

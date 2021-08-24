@@ -1,18 +1,25 @@
 /*
 font-family: 'Indie Flower', cursive;
 font-family: 'Gaegu', cursive;
-*/
 
+d4cac5
+*/
 body{
+    margin: 5% 0;
     background-color: #d4cac5;
-    margin: 2% auto;
+    
     text-align: center;
     color: white;
     font-family: 'Gaegu', cursive;
+
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
 }
 
 section{
-    margin: 8% auto;
+    margin: 3% auto;
 }
 
 article{
@@ -56,11 +63,32 @@ footer{
     border-left: 0;
 }
 
-#back{
+/*mode change*/
+#mode{
+    background-size: cover;
     position: absolute;
     left: 75%;
     top: 20%;
+    width: 50px;
+    height: 50px;
 }
+
+.dark{
+    background-image: url('../image/moon.png');
+}
+
+.dark:hover{
+    background-image: url('../image/moon_hover.png');
+}
+
+.light{
+    background-image: url('../image/sun.png');
+}
+
+.light:hover{
+    background-image: url('../image/sun_hover.png');
+}
+
 
 #answer{
     width: 100%;
@@ -117,3 +145,5 @@ input[type=button]:hover{
     background-color: #df4f36;
     color: #fff;
 }
+
+/*dark mode*/

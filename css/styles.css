@@ -146,4 +146,8 @@ input[type=button]:hover{
     color: #fff;
 }
 
-/*dark mode*/
+
+#quokka:hover{
+    filter: drop-shadow(6px 6px 0 #fff)
+            drop-shadow(-6px -6px 0 #fff);
+}

@@ -43,6 +43,11 @@ function changeImg(answer){
     else img.src = "./image/quokka_basic.png";
 }
 
+/*
+ * Event Listener 
+ */
+
+//chatting event
 function chatting(){
     let user = document.getElementById("user_text").value;
 
@@ -59,9 +64,11 @@ function chatting(){
     console.log(quokkaChat[answer]);
     textShow(quokkaChat[answer]); /*quokka text*/
     changeImg(answer); /*quokka img*/
+
+    inactivityTime(); 
 }
 
-/* 모드 변경 */
+// 모드 변경 event 
 let mode = 1;
 function modeConvert(){
     let modeId = document.getElementById("mode");
@@ -76,5 +83,33 @@ function modeConvert(){
         modeId.classList.add("dark");
     }
     mode ^= 1;
+
+    inactivityTime(); 
 }
 
+/* Timer Set */
+let start = false;
+function inactivityTime() {
+    var time;
+    
+    // events
+    window.onload = resetTime;
+    document.getElementById("quokka").onclick = resetTime;
+
+    function alertUser() {
+        document.getElementById("quokka").src = "./image/quokka_timeover.png";
+        textShow("나 심심해");
+        start = true;
+    }
+
+    function resetTime() {
+        clearTimeout(time); //실행 취소
+        document.getElementById("quokka").src = "./image/quokka_basic.png";
+        if(start) textShow("불렀어?!");
+        time = setTimeout(alertUser, 1000 * 60); //1 min
+    }
+
+};
+
+// run the function
+inactivityTime(); 

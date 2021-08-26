@@ -31,7 +31,15 @@ const userDoing = [
 
 function textShow(str){
     let txt = document.getElementById("answer");
-    txt.innerText = str;
+    // txt.innerText = str;
+
+    let typewriter = new Typewriter(txt, {
+        loop:false
+    });
+
+    typewriter.typeString(str)
+    .pauseFor(2500)
+    .start();
 }
 
 function changeImg(answer){
